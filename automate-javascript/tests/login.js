@@ -1,6 +1,6 @@
 const { Builder, By, Key, until, logging } = require("selenium-webdriver");
 const assert = require("assert");
-export async function login() {
+async function login() {
   let driver = await new Builder().forBrowser("chrome").build();
   await driver.get("https://dev.driip.world/auth/member/login");
 
@@ -31,3 +31,4 @@ export async function login() {
     console.log(`[${log.level.name}] ${log.message}`);
   });
 }
+login();
